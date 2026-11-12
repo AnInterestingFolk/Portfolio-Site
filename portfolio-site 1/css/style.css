@@ -6,11 +6,14 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
-  color: #222222;
+  color: #333333;
   background-color: #f4f4f4;
 }
 
-/* Base design */
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  color: #111111;
+}
 
 header {
   background-color: #ffffff;
@@ -25,9 +28,15 @@ header h1 {
 }
 
 header nav a {
-  color: #222222;
+  color: #333333;
   text-decoration: none;
   margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #0056b3;
 }
 
 .layout {
@@ -40,30 +49,37 @@ section {
   margin-bottom: 40px;
 }
 
-/* Card grid (for phones shows only 1 pictures) */
-
+/* Card grid  */
 .cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 30px; 
 }
 
 article {
   background-color: #ffffff;
   border: 1px solid #cccccc;
   border-radius: 6px;
-  padding: 15px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
 }
 
-article h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.1rem;
+article:hover {
+  border-color: #0056b3;
 }
 
 article img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+article h3 {
+  margin: 0;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #555555;
+  font-family: system-ui, sans-serif;
 }
 
 aside {
@@ -92,16 +108,17 @@ footer {
   border-top: 1px solid #e0e0e0;
   text-align: center;
   padding: 20px;
+  color: #555555;
 }
 
-/* Adaptivity (PC and tablet, shows 3 pictures) */
-
+/* Tablet layout */
 @media (min-width: 600px) {
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 
+/* Desktop layout */
 @media (min-width: 1024px) {
   header {
     display: flex;
