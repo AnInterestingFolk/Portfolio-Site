@@ -156,4 +156,7 @@ footer {
 article.recent {
   border-left: 3px solid #0056b3;
 }
+.hidden {
+  display: none;
+}
 }

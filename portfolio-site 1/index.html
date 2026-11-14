@@ -26,6 +26,34 @@
 
 <section id="portfolio">
         <h2>Роботи</h2>
+        <!-- Filter for category (Event: change) -->
+        <div style="margin-bottom: 20px;">
+          <label for="category-filter" style="font-weight: 500;">Фільтр за Категорією: </label>
+          <select id="category-filter">
+            <option value="all">Усі Категорії</option>
+            <option value="photography">Фото</option>
+            <option value="design">Дезайн</option>
+          </select>
+        </div>
+
+        <!-- Form for adding new projects (Event: submit) -->
+        <form id="add-project-form" style="background: #fff; padding: 20px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 30px;">
+          <h3 style="margin-top: 0;">Додати Новий Проект</h3>
+          
+          <label for="title-input">Назва:</label>
+          <input type="text" id="title-input" required style="margin-right: 15px;">
+
+          <label for="year-input">Рік:</label>
+          <input type="number" id="year-input" required min="2000" style="margin-right: 15px;">
+
+          <label for="category-input">Категорія:</label>
+          <select id="category-input" required style="margin-right: 15px;">
+            <option value="photography">Фото</option>
+            <option value="design">Дезайн</option>
+          </select>
+
+          <button type="submit" style="padding: 5px 15px;">Додати Проект</button>
+        </form>
         <!-- Element for the summary requirement -->
         <p id="projects-count">Кількість робіт: 0</p>
         
